@@ -81,6 +81,12 @@ module.exports = {
         path: `${__dirname}/content/articles/`
       }
     },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'G-TVYBVK5477'
+      }
+    }
   ],
   partytownProxiedURLs: [`https://www.googletagmanager.com/gtag/js?id=${process.env.GATSBY_GA_MEASUREMENT_ID}`]
 };
