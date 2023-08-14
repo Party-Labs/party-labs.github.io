@@ -94,12 +94,6 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/opensource/`
-      }
-    },
-    {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-XXXXXXXX-X'
