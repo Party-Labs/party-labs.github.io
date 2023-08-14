@@ -17,7 +17,7 @@ module.exports = {
   // },
   trailingSlash: 'always',
   siteMetadata: {
-    name: 'Eno Leriand',
+    name: 'Party Labs',
     description: 'Offensive Security Engineer',
     keywords: [
       'React',

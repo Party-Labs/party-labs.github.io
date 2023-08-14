@@ -1,7 +1,7 @@
 {
   "name": "Eno",
   "version": "1.0.0",
-  "description": "Eno Leriand's Blog",
+  "description": "Party Labs's Blog",
   "main": "index.js",
   "scripts": {
     "develop": "gatsby develop",

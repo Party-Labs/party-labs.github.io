@@ -12,7 +12,7 @@ const GenericAside = () => {
         className="block rounded-full border-2 border-white h-16 w-16 m-0 mx-auto"
       />
       <div className="mb-4">
-        <h5 className="mb-0 text-base text-center leading-6 font-semibold uppercase text-secondary">Eno Leriand</h5>
+        <h5 className="mb-0 text-base text-center leading-6 font-semibold uppercase text-secondary">Party Labs</h5>
         <p className="mb-0 text-slate-300 text-sm text-center m-0">
           Vulenrability Research{' '}
         </p>
