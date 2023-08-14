@@ -40,12 +40,12 @@ const Page = ({
       <ul className="list-none m-0 p-0 flex flex-wrap gap-2 mb-12">
         {tags
           ? tags.map((tag, index) => {
-              return (
-                <li key={index} className="m-0 p-0">
-                  <Tag tag={tag} />
-                </li>
-              );
-            })
+            return (
+              <li key={index} className="m-0 p-0">
+                <Tag tag={tag} />
+              </li>
+            );
+          })
           : null}
       </ul>
       <MdxParser embedded={embeddedImages}>{body}</MdxParser>
@@ -59,7 +59,7 @@ const Page = ({
             <TableOfContents slug={slug} items={toc} />
           </div>
         ) : null}
-        <WebmentionAside target={`https://paulie.dev${slug}`} />
+        <WebmentionAside target={`https://partylabs.gatsbyjs.io${slug}`} />
       </AsideElement>
     </Fragment>
   );

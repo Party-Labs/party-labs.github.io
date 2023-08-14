@@ -1,9 +1,9 @@
 const { BetaAnalyticsDataClient } = require('@google-analytics/data');
 
 const analyticsDataClient = new BetaAnalyticsDataClient({
-  projectId: 'paulie-dev',
+  projectId: 'partylabs',
   credentials: {
-    client_email: 'google-analytics@paulie-dev.iam.gserviceaccount.com',
+    client_email: 'partylabs@partylabs.iam.gserviceaccount.com',
     private_key: process.env.GOOGLE_APPLICATION_CREDENTIALS.replace(/\\n/gm, '\n')
   }
 });
@@ -16,7 +16,7 @@ function formatDate(string) {
   return `${year}/${month}/${day}`;
 }
 
-module.exports = async function () {
+module.exports = async function() {
   try {
     // https://ga-dev-tools.web.app/ga4/dimensions-metrics-explorer/
     const [totalUsers] = await analyticsDataClient.runReport({

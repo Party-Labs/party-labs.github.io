@@ -229,8 +229,8 @@ const Page = ({
           <h2 className="m-0 text-2xl uppercase text-salmon text-center">Latest Webmentions</h2>
           <p className="mt-0 mb-4 text-slate-300 text-base text-center">
             Webmentions feed for{' '}
-            <a href="https://paulie.dev/" target="_blank" rel="noreferrer" className="text-salmon">
-              paulie.dev
+            <a href="https://partylabs.gatsbyjs.io/" target="_blank" rel="noreferrer" className="text-salmon">
+              partylabs.gatsbyjs.io
             </a>
             .
           </p>
