@@ -1,5 +1,5 @@
 {
-  "name": "Eno",
+  "name": "Party Labs",
   "version": "1.0.0",
   "description": "Party Labs's Blog",
   "main": "index.js",
@@ -18,13 +18,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/z0rs/dev.git"
+    "url": "git+https://github.com/Party-Labs/PartyLabs.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/z0rs/dev-issues"
+    "url": "https://github.com/Party-Labs/PartyLabs-issues"
   },
   "dependencies": {
     "@google-analytics/data": "^3.0.0",
