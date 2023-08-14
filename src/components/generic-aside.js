@@ -8,7 +8,7 @@ const GenericAside = () => {
     <div className="grid gap-4 rounded border border-outline bg-surface/50 px-4 sm:px-6 py-6">
       <StaticImage
         alt="Introducing Gatsby 4"
-        src="../../static/images/aside-eno.png"
+        src="../../static/images/aside-partylabs.jpg"
         className="block rounded-full border-2 border-white h-16 w-16 m-0 mx-auto"
       />
       <div className="mb-4">
