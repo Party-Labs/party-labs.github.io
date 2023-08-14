@@ -1,15 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Script } from 'gatsby';
-
-import { AppProvider } from '../context/app-context';
 
 const RootElement = ({ children }) => {
   return (
-    <AppProvider>
+    <Fragment>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GATSBY_GA_MEASUREMENT_ID}`}
         strategy="off-main-thread"
-        forward={['gtag']}
+        forward={[`gtag`]}
       />
       <Script
         id="gtag-config"
@@ -21,9 +19,8 @@ const RootElement = ({ children }) => {
           gtag('config', '${process.env.GATSBY_GA_MEASUREMENT_ID}', { send_page_view: false })`
         }}
       />
-      <Script src={`https://platform.twitter.com/widgets.js`} />
-      {children}
-    </AppProvider>
+      <div>{children}</div>
+    </Fragment>
   );
 };
 
