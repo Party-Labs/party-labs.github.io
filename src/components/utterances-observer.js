@@ -26,7 +26,7 @@ const UtterancesObserver = () => {
   return (
     <section ref={ref}>
       {isChildVisible ? (
-        <UtterancesComments repo="PaulieScanlon/paulie-dev-2019-comments-repo" />
+        <UtterancesComments repo="Party-Labs/comments" />
       ) : (
         <blockquote>Loading</blockquote>
       )}
