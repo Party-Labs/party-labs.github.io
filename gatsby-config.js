@@ -18,7 +18,7 @@ module.exports = {
   trailingSlash: 'always',
   siteMetadata: {
     name: 'Party Labs',
-    description: 'Offensive Security Engineer',
+    description: 'Vulnerability Research',
     keywords: [
       'React',
       'Gatsby',
@@ -38,7 +38,7 @@ module.exports = {
       'Serverless Functions'
     ],
     siteUrl: process.env.URL,
-    defaultImage: '/images/76135196.jpeg'
+    defaultImage: '/images/20190821.jpg'
   },
   plugins: [
     'gatsby-plugin-gatsby-cloud',
@@ -79,18 +79,6 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/articles/`
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/demos/`
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/streams/`
       }
     },
     {
