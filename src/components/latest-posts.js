@@ -25,7 +25,7 @@ const LatestPosts = () => {
           }
           featuredImage {
             childImageSharp {
-              thumbnail: gatsbyImageData(width: 180)
+              thumbnail: gatsbyImageData(width: 320)
             }
           }
         }
