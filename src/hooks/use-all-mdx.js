@@ -7,7 +7,7 @@ export const useAllMdx = () => {
     {
       allMdx(
         filter: {
-          frontmatter: { status: { ne: "draft" }, type: { in: ["post", "article", "demo", "stream"] } }
+          frontmatter: { status: { ne: "draft" }, type: { in: ["post", "article"] } }
         }
         sort: { frontmatter: { date: DESC } }
       ) {
