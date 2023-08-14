@@ -14,17 +14,17 @@ const GenericAside = () => {
       <div className="mb-4">
         <h5 className="mb-0 text-base text-center leading-6 font-semibold uppercase text-secondary">Eno Leriand</h5>
         <p className="mb-0 text-slate-300 text-sm text-center m-0">
-          Offensive Security Engineer{' '}
+          Vulenrability Research{' '}
         </p>
       </div>
       <a
-        href="https://x.com/z0rs_"
+        href="https://www.linkedin.com/in/"
         target="_blank"
         rel="noreferrer"
         className="flex items-center justify-center gap-4 no-underline text-sm text-center py-2 px-2 transition-all duration-300 rounded border border-outline bg-surface hover:text-white hover:bg-muted/20"
       >
-        <NavigationIcon icon="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-        @z0rs_
+        <NavigationIcon icon="M21.4,0.64H2.72c-1.14,0-2.02,0.88-2.02,2.02v18.55c0,1.26,0.88,2.15,2.02,2.15h18.55c1.14,0,2.02-0.88,2.02-2.02V2.66C23.42,1.52,22.53,0.64,21.4,0.64z M7.89,19.19H4.86V9.48h3.03C7.89,9.48,7.89,19.19,7.89,19.19z M6.38,8.09c-1.01,0-1.77-0.76-1.77-1.77s0.76-1.89,1.77-1.89s1.77,0.76,1.77,1.77S7.26,8.09,6.38,8.09z M19.25,19.19h-3.03v-4.67c0-1.14,0-2.65-1.64-2.65s-1.77,1.26-1.77,2.52v4.8H9.79V9.48h2.9v1.26l0,0c0.38-0.76,1.39-1.64,2.9-1.64c3.03,0,3.66,2.02,3.66,4.67C19.25,13.89,19.25,19.19,19.25,19.19z" />
+        Party Labs, Ltd
       </a>
     </div>
   );
