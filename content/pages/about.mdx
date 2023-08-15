@@ -10,6 +10,8 @@ embeddedImages:
   - https://res.cloudinary.com/partylabs/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1692073527/sarah.jpg
 ---
 
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+
 ## Summary
 Party Labs was founded in 2019 as an entity focused on research and understanding in cybersecurity. We are committed to identifying, analyzing and addressing vulnerabilities and threats in an evolving digital environment. With a dedication to excellence in research and collaborative work, we create a platform for individuals who are passionate about maintaining the integrity of cybersecurity.
 
@@ -28,8 +30,10 @@ To be an innovation hub that guides the development of trusted and effective cyb
 ## Our CTF Team
 
 ### Rafael
-<GatsbyImage image={props.embedded.image1} alt="Rafael" />
-Rafael has a background in cryptography and complex code breaking. His expertise in analyzing hidden patterns has helped the team meet the challenges of CTF with extraordinary abilities.
+<div style="display: flex; align-items: center;">
+  <GatsbyImage image={props.embedded.image1} alt="Rafael" style={{ borderRadius: '50%', marginRight: '20px' }} />
+  Rafael has a background in cryptography and complex code breaking. His expertise in analyzing hidden patterns has helped the team meet the challenges of CTF with extraordinary abilities.
+</div>
 
 ### Varel Valensio
 <div style="display: flex; align-items: center;">
