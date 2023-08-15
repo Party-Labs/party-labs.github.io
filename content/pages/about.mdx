@@ -27,17 +27,14 @@ To be an innovation hub that guides the development of trusted and effective cyb
 
 ## CTF Team
 
-
-<GatsbyImage
-  image={props.embedded.image1}
-  alt="Rafael"
-  style={{
-    borderRadius: '50%',
-    marginRight: '20px',
-    display: 'flex',
-    alignItems: 'center',
-  }}
-/>
+<Flex sx={{ flexWrap: 'wrap' }}>
+  <Box sx={{ width: ['100%', '50%'] }}>
+    <Img fluid={props.embeddedImages.image1.fluid} />
+  </Box>
+  <Box sx={{ width: ['100%', '50%'] }}>
+    <Img fluid={props.embeddedImages.image2.fluid} />
+  </Box>
+</Flex>
 Rafael has a background in cryptography and complex code breaking. His expertise in analyzing hidden patterns has helped the team meet the challenges of CTF with extraordinary abilities.
 
 
