@@ -1,15 +1,15 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import ArticleCard from '../components/article-card';
+import PostCard from '../components/post-card';
 
-const AllArticles = () => {
+const AllPosts = () => {
   const {
     allMdx: { nodes }
   } = useStaticQuery(graphql`
     {
       allMdx(
-        filter: { frontmatter: { status: { ne: "draft" }, type: { eq: "article" } } }
+        filter: { frontmatter: { status: { ne: "draft" }, type: { eq: "post" } } }
         sort: { frontmatter: { date: DESC } }
       ) {
         nodes {
@@ -20,11 +20,11 @@ const AllArticles = () => {
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
-            publication
+            dateModified(formatString: "MMMM DD, YYYY")
           }
-          logo {
+          featuredImage {
             childImageSharp {
-              logo: gatsbyImageData(width: 24, quality: 100)
+              thumbnail: gatsbyImageData(width: 320)
             }
           }
         }
@@ -33,25 +33,25 @@ const AllArticles = () => {
   `);
 
   return (
-    <ul className="mt-16 grid gap-8 list-none m-0 mb-8 p-0">
+    <ul className="mt-8 grid gap-8 list-none m-0 mb-8 p-0">
       {nodes.map((node, index) => {
         const {
           fields: { slug },
           excerpt,
-          frontmatter: { title, date, publication },
-          logo: {
-            childImageSharp: { logo }
+          frontmatter: { title, date, dateModified },
+          featuredImage: {
+            childImageSharp: { thumbnail }
           }
         } = node;
 
         return (
-          <ArticleCard
+          <PostCard
             key={index}
             link={slug}
             title={title}
-            logo={logo}
-            publication={publication}
+            thumbnail={thumbnail}
             date={date}
+            dateModified={dateModified}
             excerpt={excerpt}
           />
         );
@@ -60,4 +60,4 @@ const AllArticles = () => {
   );
 };
 
-export default AllArticles;
+export default AllPosts;

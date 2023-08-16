@@ -1,17 +1,17 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
-import ArticleCard from '../components/article-card';
+import PostCard from '../components/post-card';
 
-const LatestArticles = () => {
+const LatestPosts = () => {
   const {
     allMdx: { nodes }
   } = useStaticQuery(graphql`
     {
       allMdx(
-        filter: { frontmatter: { status: { ne: "draft" }, type: { eq: "article" } } }
+        filter: { frontmatter: { status: { ne: "draft" }, type: { eq: "post" } } }
         sort: { frontmatter: { date: DESC } }
-        limit: 3
+        limit: 7
       ) {
         nodes {
           fields {
@@ -21,11 +21,11 @@ const LatestArticles = () => {
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
-            publication
+            dateModified(formatString: "MMMM DD, YYYY")
           }
-          logo {
+          featuredImage {
             childImageSharp {
-              logo: gatsbyImageData(width: 24, quality: 100)
+              thumbnail: gatsbyImageData(width: 320)
             }
           }
         }
@@ -35,39 +35,39 @@ const LatestArticles = () => {
 
   return (
     <section>
-      <h2 className="m-0 text-2xl uppercase text-salmon">Latest Articles</h2>
+      <h2 className="m-0 text-2xl uppercase text-salmon">Latest Posts</h2>
       <p className="mt-0 mb-8 text-slate-300 text-base">
-        Here's the latest articles I've written that have been published elsewhere.
+        You can find the post here, on the topic of vulnerabilities and CTF.
       </p>
       <ul className="grid gap-8 list-none m-0 mb-8 p-0">
         {nodes.map((node, index) => {
           const {
             fields: { slug },
             excerpt,
-            frontmatter: { title, date, publication },
-            logo: {
-              childImageSharp: { logo }
+            frontmatter: { title, date, dateModified },
+            featuredImage: {
+              childImageSharp: { thumbnail }
             }
           } = node;
 
           return (
-            <ArticleCard
+            <PostCard
               key={index}
               link={slug}
               title={title}
-              logo={logo}
-              publication={publication}
+              thumbnail={thumbnail}
               date={date}
+              dateModified={dateModified}
               excerpt={excerpt}
             />
           );
         })}
       </ul>
       <div className="flex justify-center">
-        <Link to="/articles" className="flex gap-2 items-center no-underline">
-          More Articles{' '}
-          <span role="img" aria-label="file folder">
-            📁
+        <Link to="/posts" className="flex gap-2 items-center no-underline">
+          More Posts{' '}
+          <span role="img" aria-label="pencil">
+            ✏️
           </span>
         </Link>
       </div>
@@ -75,4 +75,4 @@ const LatestArticles = () => {
   );
 };
 
-export default LatestArticles;
+export default LatestPosts;
