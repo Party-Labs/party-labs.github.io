@@ -1,15 +1,15 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
-import PostCard from '../components/post-card';
+import ArticleCard from '../components/article-card;
 
-const LatestPosts = () => {
+const LatestArticles = () => {
   const {
     allMdx: { nodes }
   } = useStaticQuery(graphql`
     {
       allMdx(
-        filter: { frontmatter: { status: { ne: "draft" }, type: { eq: "post" } } }
+        filter: { frontmatter: { status: { ne: "draft" }, type: { eq: "article" } } }
         sort: { frontmatter: { date: DESC } }
         limit: 7
       ) {
@@ -35,7 +35,7 @@ const LatestPosts = () => {
 
   return (
     <section>
-      <h2 className="m-0 text-2xl uppercase text-salmon">Latest Posts</h2>
+      <h2 className="m-0 text-2xl uppercase text-salmon">Latest Articles</h2>
       <p className="mt-0 mb-8 text-slate-300 text-base">
         You can find the post here, on the topic of vulnerabilities and CTF.
       </p>
@@ -51,7 +51,7 @@ const LatestPosts = () => {
           } = node;
 
           return (
-            <PostCard
+            <ArticleCard
               key={index}
               link={slug}
               title={title}
@@ -64,8 +64,8 @@ const LatestPosts = () => {
         })}
       </ul>
       <div className="flex justify-center">
-        <Link to="/posts" className="flex gap-2 items-center no-underline">
-          More Posts{' '}
+        <Link to="/articles" className="flex gap-2 items-center no-underline">
+          More Articles{' '}
           <span role="img" aria-label="pencil">
             ✏️
           </span>
@@ -75,4 +75,4 @@ const LatestPosts = () => {
   );
 };
 
-export default LatestPosts;
+export default LatestArticles;

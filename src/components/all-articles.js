@@ -1,15 +1,15 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import PostCard from '../components/post-card';
+import ArticleCard from '../components/article-card';
 
-const AllPosts = () => {
+const AllArticles = () => {
   const {
     allMdx: { nodes }
   } = useStaticQuery(graphql`
     {
       allMdx(
-        filter: { frontmatter: { status: { ne: "draft" }, type: { eq: "post" } } }
+        filter: { frontmatter: { status: { ne: "draft" }, type: { eq: "article" } } }
         sort: { frontmatter: { date: DESC } }
       ) {
         nodes {
@@ -45,7 +45,7 @@ const AllPosts = () => {
         } = node;
 
         return (
-          <PostCard
+          <ArticleCard
             key={index}
             link={slug}
             title={title}
@@ -60,4 +60,4 @@ const AllPosts = () => {
   );
 };
 
-export default AllPosts;
+export default AllArticles;
