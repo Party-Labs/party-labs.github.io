@@ -1,15 +1,15 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
-import ArticleCard from '../components/article-card;
+import PostCard from '../components/post-card';
 
-const LatestArticles = () => {
+const LatestPosts = () => {
   const {
     allMdx: { nodes }
   } = useStaticQuery(graphql`
     {
       allMdx(
-        filter: { frontmatter: { status: { ne: "draft" }, type: { eq: "article" } } }
+        filter: { frontmatter: { status: { ne: "draft" }, type: { eq: "post" } } }
         sort: { frontmatter: { date: DESC } }
         limit: 7
       ) {
@@ -35,9 +35,9 @@ const LatestArticles = () => {
 
   return (
     <section>
-      <h2 className="m-0 text-2xl uppercase text-salmon">Latest Articles</h2>
+      <h2 className="m-0 text-2xl uppercase text-salmon">Latest Posts</h2>
       <p className="mt-0 mb-8 text-slate-300 text-base">
-        You can find the Article here, on the topic of vulnerabilities and CTF.
+        You can find the post here, on the topic of vulnerabilities and CTF.
       </p>
       <ul className="grid gap-8 list-none m-0 mb-8 p-0">
         {nodes.map((node, index) => {
@@ -51,7 +51,7 @@ const LatestArticles = () => {
           } = node;
 
           return (
-            <ArticleCard
+            <PostCard
               key={index}
               link={slug}
               title={title}
@@ -64,8 +64,8 @@ const LatestArticles = () => {
         })}
       </ul>
       <div className="flex justify-center">
-        <Link to="/articles" className="flex gap-2 items-center no-underline">
-          More Articles{' '}
+        <Link to="/posts" className="flex gap-2 items-center no-underline">
+          More Posts{' '}
           <span role="img" aria-label="pencil">
             ✏️
           </span>
@@ -75,4 +75,4 @@ const LatestArticles = () => {
   );
 };
 
-export default LatestArticles;
+export default LatestPosts;
