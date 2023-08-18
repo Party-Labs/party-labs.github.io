@@ -5,7 +5,6 @@ import MdxParser from '../components/mdx-parser';
 import AsideElement from '../components/aside-element';
 import DateStamp from '../components/date-stamp';
 import FeaturedImageAside from '../components/featured-image-aside';
-import AddReaction from '../components/add-reaction';
 import UtterancesObserver from '../components/utterances-observer';
 import Tag from '../components/tag';
 import Seo from '../components/seo';
