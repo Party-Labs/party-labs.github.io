@@ -49,7 +49,7 @@ const Page = ({
           : null}
       </ul>
       <MdxParser embedded={embeddedImages}>{body}</MdxParser>
-      {/* <AddReaction title={title} slug={slug} /> */}
+      <AddReaction title={title} slug={slug} />
       <UtterancesObserver />
       <AsideElement>
         <FeaturedImageAside alt={title} thumbnail={thumbnail} shareText={`${title}\n ${siteUrl}${slug}`} />
