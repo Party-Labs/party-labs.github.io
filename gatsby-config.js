@@ -78,7 +78,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/ctf/`
+        path: `${__dirname}/content/ctfs/`
       }
     },
     {

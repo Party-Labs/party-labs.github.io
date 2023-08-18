@@ -9,7 +9,7 @@ const LatestCtfs = () => {
   } = useStaticQuery(graphql`
     {
       allMdx(
-        filter: { frontmatter: { status: { ne: "draft" }, type: { eq: "Ctf" } } }
+        filter: { frontmatter: { status: { ne: "draft" }, type: { eq: "ctf" } } }
         sort: { frontmatter: { date: DESC } }
         limit: 7
       ) {
