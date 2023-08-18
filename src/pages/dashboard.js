@@ -6,16 +6,12 @@ import Seo from '../components/seo';
 import AsideElement from '../components/aside-element';
 import GenericAside from '../components/generic-aside';
 
-import Accordion from '../components/accordion';
 import AllDaysChart from '../components/all-days-chart';
 import AllYearsChart from '../components/all-years-chart';
 import AllTagsChart from '../components/all-tags-chart';
 import AllPublisherChart from '../components/all-publisher-chart';
-import LatestReaction from '../components/latest-reaction';
-import LatestReactionDom from '../components/latest-reaction-dom';
 import ThreeScene from '../components/three-scene';
 import SiteViewChart from '../components/site-view-chart';
-import RecentGitHubUserEvent from '../components/recent-github-user-events';
 
 const Page = ({
   data: {
@@ -27,7 +23,7 @@ const Page = ({
   },
 
   serverData: {
-    serverResponse: { faunaAllreactions, gaAnalytics, faunaLatestReaction, webmentions }
+    serverResponse: { gaAnalytics, webmentions }
   }
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -172,58 +168,6 @@ const Page = ({
           </div>
         </section>
 
-        <section>
-          {isLoaded ? (
-            <LatestReaction />
-          ) : (
-            <Fragment>
-              {faunaLatestReaction?.data ? (
-                <LatestReactionDom
-                  isLoaded={false}
-                  isLoading={false}
-                  hasJavascript={true}
-                  title={faunaLatestReaction.data.title}
-                  reaction={faunaLatestReaction.data.reaction}
-                  slug={faunaLatestReaction.data.slug}
-                  date={faunaLatestReaction.data.date}
-                />
-              ) : null}
-            </Fragment>
-          )}
-          <div className="mt-2 leading-tight">
-            <small className="text-slate-400 text-xs">Powered by </small>
-            <a href="https://fauna.com/" target="_blank" rel="noreferrer" className="text-xs">
-              Fauna
-            </a>
-          </div>
-        </section>
-
-        <section>
-          <h2 className="m-0 text-2xl uppercase text-salmon">GitHub Activity</h2>
-          <p className="mt-0 mb-4 text-slate-300 text-base">Recent GitHub Activity.</p>
-          <RecentGitHubUserEvent />
-        </section>
-
-        <section>
-          <h2 className="m-0 text-2xl uppercase text-salmon">All Reactions</h2>
-          <p className="mt-0 mb-4 text-slate-300 text-base">Total reaction counts collected from around the site.</p>
-          {faunaAllreactions?.data ? (
-            <Accordion reactions={faunaAllreactions} />
-          ) : (
-            <div className="flex gap-4 items-center p-2">
-              <span role="img" aria-label="Firecracker" className="text-xl">
-                🧨
-              </span>
-              <small className="text-red-500 text-sm leading-tight">Fauna Error</small>
-            </div>
-          )}
-          <div className="mt-2 leading-tight">
-            <small className="text-slate-400 text-xs">Powered by </small>
-            <a href="https://fauna.com/" target="_blank" rel="noreferrer" className="text-xs">
-              Fauna
-            </a>
-          </div>
-        </section>
 
         <section>
           <h2 className="m-0 text-2xl uppercase text-salmon text-center">Latest Webmentions</h2>
@@ -275,23 +219,17 @@ const Page = ({
 };
 
 export async function getServerData() {
-  const faunaAllReactionsUtil = require('../utils/fauna-all-reactions-util');
   const gaAnalyticsUtil = require('../utils/ga-analytics-util');
-  const faunaLatestReactionUtil = require('../utils/fauna-latest-reaction-util');
   const webmentionsUtil = require('../utils/webmentions-util');
 
   try {
-    const faunaAllreactions = await faunaAllReactionsUtil();
     const gaAnalytics = await gaAnalyticsUtil();
-    const faunaLatestReaction = await faunaLatestReactionUtil();
     const webmentions = await webmentionsUtil();
 
     return {
       props: {
         serverResponse: {
-          faunaAllreactions,
           gaAnalytics,
-          faunaLatestReaction,
           webmentions
         }
       }
@@ -300,9 +238,7 @@ export async function getServerData() {
     return {
       props: {
         serverResponse: {
-          reactions: null,
           locations: null,
-          latest: null,
           webmentions: null
         }
       }
