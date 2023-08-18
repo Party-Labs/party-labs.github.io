@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import CtfCard from '../components/ctf-card';
 
-const AllCtf = () => {
+const AllCtfs = () => {
   const {
     allMdx: { nodes }
   } = useStaticQuery(graphql`
@@ -60,4 +60,4 @@ const AllCtf = () => {
   );
 };
 
-export default AllCtf;
+export default AllCtfs;

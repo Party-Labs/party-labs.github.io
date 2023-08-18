@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from 'gatsby';
 
 import CtfCard from '../components/ctf-card';
 
-const LatestCtf = () => {
+const LatestCtfs = () => {
   const {
     allMdx: { nodes }
   } = useStaticQuery(graphql`
@@ -64,7 +64,7 @@ const LatestCtf = () => {
         })}
       </ul>
       <div className="flex justify-center">
-        <Link to="/posts" className="flex gap-2 items-center no-underline">
+        <Link to="/ctf" className="flex gap-2 items-center no-underline">
           More Ctf{' '}
           <span role="img" aria-label="pencil">
             ✏️
@@ -75,4 +75,4 @@ const LatestCtf = () => {
   );
 };
 
-export default LatestCtf;
+export default LatestCtfs;
