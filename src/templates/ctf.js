@@ -117,6 +117,6 @@ export const Head = ({
   }
 }) => {
   return (
-    <Seo type="Ctf" title={title} description={excerpt} slug={slug} image={og.images.fallback.src} tags={tags} />
+    <Seo type="ctf" title={title} description={excerpt} slug={slug} image={og.images.fallback.src} tags={tags} />
   );
 };
