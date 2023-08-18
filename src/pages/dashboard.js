@@ -6,16 +6,16 @@ import Seo from '../components/seo';
 import AsideElement from '../components/aside-element';
 import GenericAside from '../components/generic-aside';
 
-import Accordion from '../components/accordion';
+// import Accordion from '../components/accordion';
 import AllDaysChart from '../components/all-days-chart';
 import AllYearsChart from '../components/all-years-chart';
 import AllTagsChart from '../components/all-tags-chart';
 import AllPublisherChart from '../components/all-publisher-chart';
-import LatestReaction from '../components/latest-reaction';
-import LatestReactionDom from '../components/latest-reaction-dom';
+// import LatestReaction from '../components/latest-reaction';
+// import LatestReactionDom from '../components/latest-reaction-dom';
 import ThreeScene from '../components/three-scene';
 import SiteViewChart from '../components/site-view-chart';
-import RecentGitHubUserEvent from '../components/recent-github-user-events';
+// import RecentGitHubUserEvent from '../components/recent-github-user-events';
 
 const Page = ({
   data: {
@@ -198,13 +198,13 @@ const Page = ({
               Fauna
             </a>
           </div>
-        </section> */}
+        </section> 
 
         <section>
           <h2 className="m-0 text-2xl uppercase text-salmon">GitHub Activity</h2>
           <p className="mt-0 mb-4 text-slate-300 text-base">Recent GitHub Activity.</p>
           <RecentGitHubUserEvent />
-        </section>
+        </section> */}
 
         {/* <section>
           <h2 className="m-0 text-2xl uppercase text-salmon">All Reactions</h2>
@@ -231,7 +231,7 @@ const Page = ({
           <h2 className="m-0 text-2xl uppercase text-salmon text-center">Latest Webmentions</h2>
           <p className="mt-0 mb-4 text-slate-300 text-base text-center">
             Webmentions feed for{' '}
-            <a href="https://paulie.dev/" target="_blank" rel="noreferrer" className="text-salmon">
+            <a href="partylabs.gatsbyjs.io/" target="_blank" rel="noreferrer" className="text-salmon">
               paulie.dev
             </a>
             .
