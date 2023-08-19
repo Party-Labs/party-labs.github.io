@@ -7,10 +7,10 @@ import AsideElement from '../components/aside-element';
 import GenericAside from '../components/generic-aside';
 
 // import Accordion from '../components/accordion';
-import AllDaysChart from '../components/all-days-chart';
-import AllYearsChart from '../components/all-years-chart';
-import AllTagsChart from '../components/all-tags-chart';
-import AllPublisherChart from '../components/all-publisher-chart';
+// import AllDaysChart from '../components/all-days-chart';
+// import AllYearsChart from '../components/all-years-chart';
+// import AllTagsChart from '../components/all-tags-chart';
+// import AllPublisherChart from '../components/all-publisher-chart';
 // import LatestReaction from '../components/latest-reaction';
 // import LatestReactionDom from '../components/latest-reaction-dom';
 import ThreeScene from '../components/three-scene';
@@ -45,30 +45,7 @@ const Page = ({
       <p className="mb-16">{body}</p>
 
       <div className="grid gap-24 min-w-full">
-        <section>
-          <h2 className="m-0 text-2xl uppercase text-salmon">Published by Month</h2>
-          <p className="mt-0 mb-4 text-slate-300 text-base">Total counts by month.</p>
-          <AllYearsChart />
-        </section>
 
-        <section>
-          <h2 className="m-0 text-2xl uppercase text-salmon">Published by Day</h2>
-          <p className="mt-0 mb-4 text-slate-300 text-base">Total counts by day.</p>
-          <AllDaysChart />
-        </section>
-
-        <section className="grid md:grid-cols-2 gap-24 md:gap-8">
-          <div>
-            <h2 className="m-0 text-2xl uppercase text-salmon">Articles By Publisher</h2>
-            <p className="mt-0 mb-4 text-slate-300 text-base">Total counts by publisher.</p>
-            <AllPublisherChart />
-          </div>
-          <div>
-            <h2 className="m-0 text-2xl uppercase text-salmon">Tags By Usage</h2>
-            <p className="mt-0 mb-4 text-slate-300 text-base">Total counts by tag.</p>
-            <AllTagsChart />
-          </div>
-        </section>
 
 
         <section className="grid md:grid-cols-2 gap-24 md:gap-8">
