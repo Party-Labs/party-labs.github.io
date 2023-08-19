@@ -302,10 +302,7 @@ export async function getServerData() {
     return {
       props: {
         serverResponse: {
-          reactions: null,
-          locations: null,
-          latest: null,
-          webmentions: null
+          locations: null
         }
       }
     };
