@@ -38,7 +38,7 @@ const AllCtfs = () => {
         const {
           fields: { slug },
           excerpt,
-          frontmatter: { title, date, dateModified },
+          frontmatter: { title, date },
           featuredImage: {
             childImageSharp: { thumbnail }
           }
