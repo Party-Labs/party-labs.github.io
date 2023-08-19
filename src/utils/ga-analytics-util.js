@@ -1,9 +1,9 @@
 const { BetaAnalyticsDataClient } = require('@google-analytics/data');
 
 const analyticsDataClient = new BetaAnalyticsDataClient({
-  projectId: 'partylabs',
+  projectId: 'partylabs-1692463966705',
   credentials: {
-    client_email: 'partylabs@partylabs.iam.gserviceaccount.com',
+    client_email: 'starting-account-k4ymb5eo8d0g@partylabs-1692463966705.iam.gserviceaccount.com',
     private_key: process.env.GOOGLE_APPLICATION_CREDENTIALS.replace(/\\n/gm, '\n')
   }
 });
