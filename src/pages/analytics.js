@@ -21,7 +21,6 @@ const Page = ({
   data: {
     pagesJson: {
       frontmatter: { title },
-      heading,
       body
     }
   },
@@ -43,7 +42,6 @@ const Page = ({
   return (
     <Fragment>
       <small className="mb-4 leading-6 font-semibold capitalize text-primary">{title}</small>
-      <h1>{heading}</h1>
       <p className="mb-16">{body}</p>
 
       <div className="grid gap-24 min-w-full">
@@ -323,7 +321,6 @@ export const query = graphql`
       frontmatter {
         title
       }
-      heading
       body
     }
   }
