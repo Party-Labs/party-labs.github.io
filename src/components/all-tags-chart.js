@@ -86,8 +86,8 @@ const AllTagsChart = memo(() => {
           }}
         >
           <p className="m-0 leading-none font-semibold">Tags Analytics</p>
-          <Link className="text-sm text-salmon" to="/dashboard">
-            /dashboard
+          <Link className="text-sm text-salmon" to="/analytics">
+            /analytics
           </Link>
         </div>
       </div>
