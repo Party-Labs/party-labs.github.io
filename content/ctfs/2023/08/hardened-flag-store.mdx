@@ -1,10 +1,10 @@
 ---
 type: ctf
-title: Shopware - CVE-2023-22731
-tags: [CVE-2021-43062, Shopware]
+title: hxp CTF 2017 - hardened flag store
+etags: [Pwnable, seccomp]
 date: 2023-08-19
 author: Eno Leriand
-featuredImage: https://repository-images.githubusercontent.com/131995661/48007500-eb3e-11e9-907a-ec69f0e53d05 
+featuredImage: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ04b-owN2AasSH8M_U4e212g8KwXMueer_NdaeZL0Ez0A6_CbuXi3scBetaT0D43mfY9E&usqp=CAU
 ---
 
 The program will read a secret string from "secret.txt" and store the string address on stack. Then it will use seccomp to create a whitelist of syscalls. We can analyze the filter by using [seccomp-tools](https://github.com/david942j/seccomp-tools):  
