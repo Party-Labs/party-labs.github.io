@@ -10,7 +10,7 @@ import GenericAside from '../components/generic-aside';
 import AllDaysChart from '../components/all-days-chart';
 import AllYearsChart from '../components/all-years-chart';
 import AllTagsChart from '../components/all-tags-chart';
-import AllPublisherChart from '../components/all-publisher-chart';
+// import AllPublisherChart from '../components/all-publisher-chart';
 // import LatestReaction from '../components/latest-reaction';
 // import LatestReactionDom from '../components/latest-reaction-dom';
 import ThreeScene from '../components/three-scene';
