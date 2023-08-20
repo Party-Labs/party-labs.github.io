@@ -1,11 +1,10 @@
 
-=========================================
 SECURITY VULNERABILITY REPORT
 =========================================
 
 EXECUTIVE SUMMARY:
 ------------------
-We would like to report a vulnerability discovery in [Product/Application], focusing on version [Affected Version]. During this assessment, we successfully identified a [Vulnerability Type] vulnerability that enables [Brief Impact Description].
+We would like to report a vulnerability discovery in `[Product/Application]`, focusing on version `[Affected Version]`. During this assessment, we successfully identified a `[Vulnerability Type]` vulnerability that enables `[Brief Impact Description]`.
 
 | Field             | Value                            |
 |-------------------|----------------------------------|
@@ -19,8 +18,8 @@ We would like to report a vulnerability discovery in [Product/Application], focu
 
 CVSS3.1 SCORING SYSTEM:
 ------------------------
-Base CVSS Score: [Base CVSS Score] ([Severity Level])
-CVSS Vector: [CVSS Vector]
+- Base CVSS Score: [Base CVSS Score] ([Severity Level])
+- CVSS Vector: [CVSS Vector]
 
 | Metric               | Value         | Explanation                         |
 |----------------------|---------------|-------------------------------------|
@@ -35,7 +34,7 @@ CVSS Vector: [CVSS Vector]
 
 PROOF OF CONCEPT (PoC):
 ------------------------
-As part of this assessment, we have developed a Proof of Concept (PoC) to demonstrate the existence and severity of the vulnerability. [Brief PoC Description or PoC URL if applicable]
+As part of this assessment, we have developed a Proof of Concept (PoC) to demonstrate the existence and severity of the vulnerability. `[Brief PoC Description or PoC URL if applicable]`
 
 PoC Impact: [PoC Impact Description]
 
@@ -49,7 +48,7 @@ To identify the vulnerability, the following steps were taken:
 
 RECOMMENDATIONS:
 -----------------
-To address the identified vulnerability and enhance the security posture of [Product/Application], we recommend the following measures:
+To address the identified vulnerability and enhance the security posture of `[Product/Application]`, we recommend the following measures:
 
 ...
 
@@ -68,4 +67,5 @@ The discovery of this vulnerability underscores the importance of comprehensive 
 ...
 
 Thank you,
+
 [Your Name]
