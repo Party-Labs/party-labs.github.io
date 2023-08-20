@@ -1,6 +1,11 @@
-
-SECURITY VULNERABILITY REPORT
-=========================================
+---
+type: article
+title: Product/Application - CVE-Year-ID
+tags: [CVE-Year-ID, Product/Application]
+date: Year-Month-Date
+author: Your Name
+featuredImage: https://LinksImages
+---
 
 EXECUTIVE SUMMARY:
 ------------------
