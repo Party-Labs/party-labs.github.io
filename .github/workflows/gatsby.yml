@@ -19,7 +19,6 @@ defaults:
     shell: bash
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     env:
@@ -48,8 +47,10 @@ jobs:
         with:
           node-version: "18"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      - name: Install Gatsby CLI
-        run: yarn global add gatsby-cli
+      - name: Install Gatsby CLI and Dependencies
+        run: |
+          yarn global add gatsby-cli
+          yarn add gatsby-plugin-postcss
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
@@ -76,7 +77,6 @@ jobs:
         with:
           path: ./public
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages
