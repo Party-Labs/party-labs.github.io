@@ -12,6 +12,7 @@ const wrapESMPlugin = (name) =>
   };
 
 module.exports = {
+  pathPrefix: "/party-labs.github.io",
   // flags: {
   //   FAST_DEV: true
   // },
