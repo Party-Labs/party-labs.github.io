@@ -47,10 +47,10 @@ jobs:
         with:
           node-version: "18"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      - name: Install Gatsby CLI and Dependencies
+      - name: Install Gatsby CLI and Plugins
         run: |
           yarn global add gatsby-cli
-          yarn add gatsby-plugin-postcss
+          yarn add gatsby-plugin-postcss gatsby-transformer-sharp gatsby-plugin-sharp
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
