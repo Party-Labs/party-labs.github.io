@@ -18,13 +18,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Party-Labs/PartyLabs.git"
+    "url": "git+https://github.com/Party-Labs/party-labs.github.io"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Party-Labs/PartyLabs-issues"
+    "url": "https://github.com/Party-Labs/party-labs.github.io-issues"
   },
   "dependencies": {
     "@google-analytics/data": "^3.0.0",
